@@ -1,0 +1,14 @@
+python3 main.py \
+        --root_path /home/lsx/workspace/project/RLR-main/ \
+        --dataset smd \ # mvtec or visa
+        --data_path /home/lsx/workspace/project/RLR-main/datasets/smd/ \
+        --backbone_arch tf_efficientnet_b6 \ # efficientnet or wrideresenet
+        --feature_levels 2 \ # 2 or 3
+        --out_indices 2 3 \ # 2 3 or 1 2 3
+        --feature_jitter 4 \
+        --layers 4 \
+        --blocks mca nsa \
+        --blocks_gate none \
+        --batch_size 4 \
+        --num_epochs 200 \
+        --save_prefix $tag
